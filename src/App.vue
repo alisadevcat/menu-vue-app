@@ -4,6 +4,7 @@
 </template>
 
 <script>
+
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
@@ -23,4 +24,8 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+</style>
+
+<style lang="scss">
+  @import './src/assets/sass/app.scss';
 </style>

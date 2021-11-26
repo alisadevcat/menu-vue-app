@@ -1,0 +1,26 @@
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 87px;
+
+    @include xl {
+        width: 87px;
+    }
+    @include md {
+        width: 58px;
+        justify-content: center;
+    }
+    .site-nav__logo {
+        //margin-left: 120px;
+        padding-top: 32px;
+
+        @include md {
+        padding-top: 32px;
+        }
+    }
+    .site-nav__logo img {
+        max-width: 120px;
+        max-height: 25px;
+    }
+}
