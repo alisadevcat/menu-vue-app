@@ -1,18 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="wrapper">
+    <app-header></app-header>
+    <app-footer></app-footer>
+  </div>
 </template>
 
 <script>
-
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from "./components/Header";
+import AppFooter from "./components/Footer";
+import HelloWorld from "./views/HelloWorld.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    AppHeader,
+    AppFooter,
+  },
+};
 </script>
 
 <style>
@@ -27,5 +31,5 @@ export default {
 </style>
 
 <style lang="scss">
-  @import './src/assets/sass/app.scss';
+@import "./src/assets/sass/app.scss";
 </style>

@@ -7,9 +7,12 @@
   color: inherit;
   margin: 0;
 }
-
+html{
+  height: 100%;
+}
 body {
   font-family: Poppins;
+  height: 100%;
 }
 
 ul {
@@ -35,4 +38,18 @@ img {
 }
 .my-class{
   color: purple;
+}
+
+nav a {
+  display:block;
+  text-align: center;
+  padding: 0;
+}
+.wrapper{
+  min-height:100%;
+  display: flex;
+  flex-direction: column;
+}
+main{
+  flex: 1 1 auto;
 }
