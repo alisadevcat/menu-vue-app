@@ -1,7 +1,7 @@
 
 // variables & functions
 @import 'variables';
-
+@import 'utilities';
 // base & layout
 @import 'base';
 @import 'breakpoints';
@@ -12,8 +12,7 @@
 
 //components
 @import 'components/nav';
-@import 'components/hero';
+@import 'components/breadcrumbs';
+@import 'components/select';
 @import 'components/search';
-@import 'components/filters';
-@import 'components/cards';
 @import 'components/footer';

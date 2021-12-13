@@ -1,0 +1,1 @@
+//require(`./theme/${variable}/index.vue`);
