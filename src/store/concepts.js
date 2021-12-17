@@ -12,7 +12,7 @@ export default {
 		//arr.reduce(function(sum, current) {return sum + current
 		//names.map(function(name) {return name.length;});
 		//arr.map(function (x) { return x * x });
-		getBranch: (state, getters) => concept=> getters.getConcept(concept).filter(item=>item == item.code)
+		getBranch: (state, getters) => concept=> getters.getConcept(concept).find(item=>item == item.code)
 	},
     //computed
 	mutations: {

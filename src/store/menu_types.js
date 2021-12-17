@@ -17,6 +17,17 @@ export default {
 	},
     //methods
 	actions: {
+		// getCategories({commit}) {
+        //     // fetch the categories and attached products from the api
+        //     axios.get('/api/products')
+        //         .then((response) => {
+        //             commit('updateProducts', response.data);
+        //         })
+        //         .catch((error) => console.error(error));
+        // },
+        // clearCart({commit}) {
+        //     commit('updateCart', []);
+        // }
 		
 	}
     //async
