@@ -1,8 +1,7 @@
 <template>
-  <div class="col-12-lg bordered mt-2">
-    <h5 class="pt-1">
-      CHOOSE HOW TO BUILD YOUR MENU
-    </h5>
+ <app-modal :chosen_menu="chosen_menu" v-if="isShown" :shortname="shortname" :concept_name="concept_name"></app-modal>
+  <div class="col-12-lg bordered mt-2" v-show="!isShown">
+    <h5 class="pt-1">CHOOSE HOW TO BUILD YOUR MENU</h5>
     <div class="row pt-1">
       <div class="col-2-md"></div>
 
@@ -15,6 +14,7 @@
             type="button"
             name="menu_saved_design_add"
             class="btn btn-default btn-block biggerBtn"
+            @click="showModal()"
           >
             START
           </button>
@@ -40,7 +40,26 @@
 </template>
 
 <script>
+import AppModal from "../components/Modal.vue";
+
 export default {
-    
+  components: {
+    AppModal,
+  },
+    props: {
+    chosen_menu: String,
+    shortname: String,
+    concept_name:String
+  },
+  data() {
+    return {
+      isShown: false,
+    };
+  },
+  methods: {
+    showModal() {
+      this.isShown = true;
+    },
+  },
 };
 </script>

@@ -20,8 +20,8 @@
           <span>Chosen: {{ selected.menu_id }}</span>
         </div>
       </div>
-      <div v-if="isSelected">
-        <choose-table></choose-table>
+      <div v-show="isSelected">
+        <choose-table :chosen_menu="selected.name" :shortname="selected.shortname" :concept_name="this.$route.params.concept"></choose-table>
         <template-image :menu_name="selected.name" :image_name="selected.shortname"></template-image>
       </div>
     </div>
@@ -44,7 +44,7 @@ export default {
     return {
       menus: [],
       selected: {},
-      menu_name:" ",
+      concept_name:" ",
       image_name:" "
     };
   },
@@ -62,12 +62,12 @@ export default {
     getMenus() {
       return this.getAllMenuTypes(this.getConcept(this.$route.params.concept));
     },
-    setMenuName(){
-      this.menu_name = this.menus.find(item=>item.name);
+    setConceptName(){
+      return this.menus.find(item=>item.name);
     },
     isSelected(){
-      return Boolean(this.selected);
-    }
+      return Object.keys(this.selected).length > 0;
+    },
   },
   created() {
     this.menus = this.getMenus;

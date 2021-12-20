@@ -6,6 +6,7 @@ import Home from "@/views/Home";
 import MyMenus from "@/views/MyMenus";
 import StartMenu from "@/views/StartMenu";
 import E404 from "@/views/E404";
+import EditMenu from "@/views/EditMenu";
 
 const routes = [
   { name: "home", path: "/", component: Home },
@@ -13,6 +14,7 @@ const routes = [
   { name: "account", path: "/account", component: Account },
   { name: "mymenus", path: "/mymenus", component: MyMenus },
   { name: "menu", path: "/start/:concept", component: StartMenu, props: true },
+  { name: "menu_edit", path: "/menus/:concept/:menu_name", component: EditMenu, props: true },
   { path: "/:any(.*)", component: E404 },
 ];
 

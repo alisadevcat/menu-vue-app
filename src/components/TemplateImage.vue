@@ -3,8 +3,7 @@
     <div class="menuHolder menuTemp" style="">
       <h5>TEMPLATE MENU</h5>
       <h6>{{ menu_name }}</h6>
-      <!-- {{addImagePath(image_name)}} -->
-<img :src="addImagePath(image_name)" />
+      <img :src="addImagePath(image_name)" />
       <br />
     </div>
   </div>
@@ -17,8 +16,10 @@ export default {
   },
   methods: {
     addImagePath(name) {
-   return  name ? require("@/assets/images/MenuThumbnails/" + name + ".png") : '';
-    }
+      return name
+        ? require("@/assets/images/MenuThumbnails/" + name + ".png")
+        : "";
+    },
   },
 };
 </script>
